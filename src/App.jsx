@@ -156,7 +156,7 @@ function App() {
           <br />
           to a section that overlaps with an unavailable time, however there is a chance that there will be slight discrepancies
           <br/>
-          between the number of sections each LA receives. The best way to limit these errors is to input LA's with the most time restrictions first
+          between the number of sections each LA receives. The best way to limit these errors is to input LA's with the most time restrictions first :D
         </h3>
         <ul>
           {assignedClasses.map(a => (
