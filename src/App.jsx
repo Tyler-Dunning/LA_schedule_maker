@@ -154,9 +154,7 @@ function App() {
           <br /><br />
           Click "Calculate" to display the final results, the final result will guarantee that there are no LA's assigned
           <br />
-          to a section that overlaps with an unavailable time, however there is a chance that there will be slight discrepancies
-          <br/>
-          between the number of sections each LA receives. The best way to limit these errors is to input LA's with the most time restrictions first :D :)
+          to a section that overlaps with an unavailable time
         </h3>
         <ul>
           {assignedClasses.map(a => (
@@ -165,13 +163,13 @@ function App() {
         </ul>
         <input
           type="text"
-          placeholder="Enter Professor Name/Section"
+          placeholder="Enter Section"
           value={secName}
           onChange={(e) => setSecName(e.target.value)}
         />
         <input
           type="text"
-          placeholder="Enter Time for Professor's Class"
+          placeholder="Enter Time for Section"
           value={secTime}
           onChange={(e) => setSecTime(e.target.value)}
         />
@@ -179,7 +177,7 @@ function App() {
         <br/>
         <input
           type="text"
-          placeholder="Enter TA Name"
+          placeholder="Enter LA Name"
           value={taName}
           onChange={(e) => setTAName(e.target.value)}
         />
