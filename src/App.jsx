@@ -341,7 +341,6 @@ function App() {
         <div>
         <h1>Step 1</h1>
         <h4>Add all of the sections, make sure to fill out each field then press "Add Section."
-          <br />To delete a section: Type the section name in the remove box then press "Remove Section."
         </h4>
         <br />
         <input
@@ -388,7 +387,6 @@ function App() {
         <h1>Step 2</h1>
         <h4>Enter all TA's and their restrictions. Click "Add Time Restriction" for each individual blocked off time.  
           <br /> Once name and all restricitons are entered, press "Add TA."
-          <br /> To delete a TA: enter the TA's name in the box then press "Remove TA."
         </h4>
         <input
           type="text"
