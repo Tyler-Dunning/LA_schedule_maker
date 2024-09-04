@@ -308,15 +308,47 @@ function App() {
       temp.push(profName[i]);
       //Date
       const date = parseInt(professors[i][1][0]);
-      temp.push(classDays[date]);
+      temp.push(classDays[date - 1]);
       //Classroom
       temp.push(classRooms[i]);
       //Time
       const time = professors[i][1];
       const [startTimeHere, endTimeHere] = time.split('-');
-      const formattedStartTime = startTimeHere.slice(1, 3) + ':' + startTimeHere.slice(3);
-      const formattedEndTime = endTimeHere.slice(1, 3) + ':' + endTimeHere.slice(3);
-      temp.push(formattedStartTime + '-' + formattedEndTime);
+      let ampmStart = "";
+      let formattedStartTime = startTimeHere.slice(1, 3) + ':' + startTimeHere.slice(3);
+      if(parseInt(formattedStartTime.slice(0,2)) > 12)
+      {
+        const adjustedHour = parseInt(formattedStartTime.slice(0,2)) - 12;
+        formattedStartTime = adjustedHour + ":" + startTimeHere.slice(3);
+        ampmStart = "P.M."
+      }
+      else if (parseInt(formattedStartTime.slice(0,2)) == 12)
+      {
+        ampmStart = "P.M."
+      }
+      else
+      {
+        ampmStart = "A.M."
+      }
+
+      let ampmEnd = "";
+      let formattedEndTime = endTimeHere.slice(1, 3) + ':' + endTimeHere.slice(3);
+      if(parseInt(formattedEndTime.slice(0,2)) > 12)
+        {
+          const adjustedHour = parseInt(formattedEndTime.slice(0,2)) - 12;
+          formattedEndTime = adjustedHour + ":" + endTimeHere.slice(3);
+          ampmEnd = "P.M."
+        }
+        else if (parseInt(formattedEndTime.slice(0,2)) == 12)
+        {
+          ampmEnd = "P.M."
+        }
+        else
+        {
+          ampmEnd = "A.M."
+        }
+
+      temp.push(formattedStartTime +  " " + ampmStart + ' - ' + formattedEndTime + " " + ampmEnd);
       //TA Name
       temp.push(assignedClasses[i][1]);
 
