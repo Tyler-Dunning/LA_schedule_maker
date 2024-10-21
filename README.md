@@ -1,8 +1,13 @@
-# React + Vite
+# Salesforce Lab Assistant Schedule Maker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This site is hosted on Vercel available at: https://schedule-maker-three.vercel.app
 
-Currently, two official plugins are available:
+This project was created based on design specifications provided by the SJSU Salesforce Lab Leader.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This site simplifies the scheduling process for the Lab sections for SJSU's Salesforce Lab Assistant.
+Given a list of all lab sections and lab instructors with their (in)availability, this website will generate an Excel file with a completed lab schedule.
+
+Each Lab Section will be assigned to one Lab Assistant with the following guidelines:
+ - Lab assistants will not be assigned to a Lab Section if they have conflicting availability
+ - Lab assistants will have as close to an even number of assigned sections as possible
+ - Lab sections are scheduled any time of the day: Monday, Tuesday, Wednesday, Thursday, Friday, Monday/Wednesday, or Tuesday/Thursday
